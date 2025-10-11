@@ -1,0 +1,123 @@
+/* ベース設定 */
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.7;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
+
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* メインビジュアル */
+.hero {
+  height: 100vh;
+  background: url('images/main.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* 作品リスト */
+.works {
+  padding: 100px 40px;
+  background-color: #111;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 60px;
+  letter-spacing: 0.1em;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.work-item {
+  text-align: center;
+}
+.work-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.work-item img:hover {
+  transform: scale(1.05);
+}
+
+/* About */
+.about {
+  padding: 100px 40px;
+  background-color: #000;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* Contact */
+.contact {
+  padding: 100px 40px;
+  background-color: #111;
+  text-align: center;
+}
+.contact a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #000;
+  color: #555;
+  font-size: 14px;
+}
