@@ -181,11 +181,11 @@ header {
 }
 
 	/*画面幅400px以下の追加指定*/
-	@media screen and (max-width:400px) {
+	@media screen and (max-width:400px) 
 
 	/*ヘッダーブロック*/
 	header {
-		padding-top: calc(var(--content-space)+10);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
+		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
 	}
 	
 	}/*追加指定ここまで*/
