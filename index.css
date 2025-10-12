@@ -372,7 +372,7 @@ a.btn5:hover {
 
 	/*ブロック全体を囲むブロック*/
 	.list-grid {
-		grid-template-columns: repeat(4, 1fr);	/*4列にする指定。2列にしたければrepeat(2, 1fr)とする。*/
+		grid-template-columns: repeat(2, 1fr);	/*4列にする指定。2列にしたければrepeat(2, 1fr)とする。*/
 		gap: 2rem;	/*ブロックの間に2文字分のスペースを空ける*/
 	}
 
