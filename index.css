@@ -19,6 +19,14 @@ html {
   font-size: 16px;
 }
 
+/* 画像の自動リサイズ設定 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
 /* ヘッダー */
 .header {
