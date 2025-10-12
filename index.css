@@ -334,31 +334,6 @@ header {
 	margin-right: 2rem;
 }
 
-/*header（ロゴが入った最上段のブロック）
----------------------------------------------------------------------------*/
-/*ヘッダーブロック*/
-header {
-	padding: var(--content-space) 0;	/*ヘッダー内の余白。上下にcss冒頭のcontent-spaceを読み込み、左右は0（ゼロ）*/
-}
-
-	/*画面幅400px以下の追加指定*/
-	@media screen and (max-width:400px) {
-
-	/*ヘッダーブロック*/
-	header {
-		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
-	}
-	
-	}/*追加指定ここまで*/
-
-
-/*ロゴ*/
-#logo {margin:0;padding: 0;}
-#logo img {
-	display: inline-block;
-	width: 200px;	/*ロゴの幅*/
-}
-
 /*main
 ---------------------------------------------------------------------------*/
 /*h2見出し*/
@@ -366,7 +341,6 @@ main h2 {
 	font-weight: 500;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
 	font-size: 1.8rem;	/*文字サイズ180%。*/
 }
-
 
 /*大ステメ
 ---------------------------------------------------------------------------*/
@@ -383,45 +357,6 @@ main h2 {
 	}
 
 	}/*追加指定ここまで*/
-/*コンテンツ
----------------------------------------------------------------------------*/
-/*コンテンツブロック*/
-#contents {
-	flex: 1;
-}
-
-/*コンテンツ内で使用するul,ol要素（リストタグ）*/
-#contents ul,#contents ol {
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-
-/*main
----------------------------------------------------------------------------*/
-/*h2見出し*/
-main h2 {
-	font-weight: 500;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
-	font-size: 1.8rem;	/*文字サイズ180%。*/
-}
-
-
-/*スライドショー下のテキストメッセージブロック（「素敵なキッチンアイテムや暮らしを彩る雑貨が揃うお店」）
----------------------------------------------------------------------------*/
-/*p要素に使っています*/
-.message {
-	line-height: 3;		/*行間を広くする*/
-}
-
-	/*画面幅700px以上の追加指定*/
-	@media screen and (min-width:700px) {
-
-	.message {
-		text-align: center;	/*中身をセンタリング*/
-	}
-
-	}/*追加指定ここまで*/
-
 
 /*btn5（「アンケートはこちら」ボタン）
 ---------------------------------------------------------------------------*/
@@ -443,91 +378,7 @@ a.btn5:hover {
 	transform: scale(1.02);
 }
 
-/* ヘッダー */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
 
-/* hero（トップ） */
-.hero {
-  height: 100vh;
-  background: url('./images/main.jpg') center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-.hero-content p {
-  font-size: 18px;
-  color: #ccc;
-}
-
-/* 作品リスト */
-.works {
-  padding: 100px 40px;
-  background-color: #111;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 60px;
-  letter-spacing: 0.1em;
-}
-
-.list-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.list {
-  text-align: center;
-}
-
-.list img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.list img:hover {
-  transform: scale(1.05);
-}
-
-/* About */
-.about {
-  padding: 100px 40px;
-  background-color: #000;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #ccc;
-}
-
-/* Contact */
-.contact {
-  padding: 100px 40px;
-  background-color: #111;
-  text-align: center;
-}
-.contact a {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 2px;
-}
 
 /*「商品ラインナップ」ブロック
 ---------------------------------------------------------------------------*/
@@ -892,3 +743,48 @@ footer div.footer2 {
   margin: 0 auto;
   box-sizing: border-box;
 }
+/*sectionの両サイドの余白を相殺するスタイル
+---------------------------------------------------------------------------*/
+.margin-lr0 {
+	margin: 0 calc(-1 * var(--content-space));
+}
+
+
+/*マニュアルページ用
+---------------------------------------------------------------------------*/
+#manual {background-image: none;}
+.manual {
+	padding: 5vw;
+}
+.manual h2,.manual h3 {
+	margin-top: 3rem;
+}
+pre {white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.clearfix::after {content: "";display: block;clear: both;}
+.color-check, .color-check a {color: #ff0000 !important;}
+.l {text-align: left !important;}
+.c {text-align: center !important;}
+.r {text-align: right !important;}
+.ws {width: 95%;display: block;}
+.wl {width: 95%;display: block;}
+.mb0 {margin-bottom: 0px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.look {display: inline-block;padding: 0px 10px;background: #eee;border: 1px solid #ccc; color: #888; border-radius: 3px;margin: 5px 0; word-break: break-all;}
+.small {font-size: 0.75em;}
+.large {font-size: 2em; letter-spacing: 0.1em;}
+.pc {display: none;}
+.dn {display: none !important;}
+.block {display: block !important;}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	.ws {width: 48%;display: inline;}
+	.sh {display: none;}
+	.pc {display: block;}
+
+	}/*追加指定ここまで*/
