@@ -140,3 +140,22 @@ body {
   color: #555;
   font-size: 14px;
 }
+
+/* ページ幅調整と画像リサイズ */
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#container, .list-grid, .intro, .works, .list, #mainimg-box {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
