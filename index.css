@@ -359,6 +359,121 @@ a.btn5:hover {
   padding-bottom: 2px;
 }
 
+/*list-c2（作品販売、アンケート）
+---------------------------------------------------------------------------*/
+.list-c2 > a {
+    text-decoration: none;
+    display: block;
+}
+
+	/*画面幅600px以上の追加指定*/
+	@media screen and (min-width:600px) {
+	
+	/*２つのボックスを囲むボックス*/
+	.list-c2 {
+		display: flex;	/*横並びにする*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*ボックス１個あたり*/
+.list-c2 .list {
+	text-align: center;
+	position: relative;
+	overflow-y: hidden;
+	color:white;		/*文字色*/
+	padding: 5rem 2rem;	/*上下、左右へのボックス内の余白*/
+	margin: 1rem 0;		/*上下、左右へのマージン*/
+}
+
+	/*画面幅600px以上の追加指定*/
+	@media screen and (min-width:600px) {
+	
+	.list-c2 > * {
+		flex: 1;
+	}
+	.list-c2 .list {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.list-c2 > a .list {
+		height: 100%;
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*左側ボックスの背景*/
+.list-c2 .list.image1 {
+	background: url("../images/1.jpg") no-repeat center center / cover;
+}
+
+/*右側ボックスの背景*/
+.list-c2 .list.image2 {
+	background: url("../images/2.jpg") no-repeat center center / cover;
+}
+
+/*h4見出し*/
+.list-c2 h4 {
+	font-weight: 200;	/*細字にする*/
+	line-height: 1.2;	/*行間を狭く*/
+}
+
+/*h4見出し内のメインテキスト（main-text）*/
+.list-c2 h4 .main-text {
+	display: block;
+	font-size: 3rem;		/*文字サイズ。3倍。*/
+	padding-top: 1.5rem;	/*上に空ける余白*/
+	padding-bottom: 3rem;	/*下に空ける余白*/
+}
+
+	/*画面幅600px以上の追加指定*/
+	@media screen and (min-width:600px) {
+
+	.list-c2 h4 .main-text {
+		font-size: 4rem;	/*文字サイズ。4倍。*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*h4見出し内のサブテキスト（sub-text）*/
+.list-c2 h4 .sub-text {
+	position: relative;
+	padding: 0 5rem;	/*上下、左右への余白設定ですが、両サイドのラインの配置にも影響します。お好みで。*/
+}
+/*h4見出し内のサブテキストの左右のライン*/
+.sub-text::before {left: 0;}
+.sub-text::after {right: 0;}
+.list-c2 h4 .sub-text::before,.list-c2 h4 .sub-text::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 2rem;	/*線の長さ*/
+	border-top: 1px solid white;	/*ラインの幅、線種、色*/
+}
+
+/*見出しの下の説明テキスト*/
+.list-c2 .list .text {
+	position: relative;z-index: 1;
+	font-size: 0.85rem;	/*文字サイズ85%*/
+}
+
+/*マウスオン用のアニメーション*/
+.list-c2 .list::before {
+	content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+	background: rgba(0,0,0,0.6);		/*写真に重ねておく半透明の黒い色。0,0,0は黒のことで0.6は色が60%出た状態。*/
+	transition: transform 0.3s 0.1s;	/*アニメーションの速度（0.3秒）と待機時間（0.1秒）。*/
+}
+.list-c2 .list:hover::before {
+	transform: translateY(100%);	/*マウスオンで半透明の黒を枠外へ出す。-100%にすると逆に移動します。*/
+}
+
+
+
 /* Footer */
 .footer {
   text-align: center;
@@ -366,6 +481,97 @@ a.btn5:hover {
   background-color: #000;
   color: #555;
   font-size: 14px;
+}
+*フッター内のロゴ画像*/
+footer .logo {
+	width: 300px;	/*幅*/
+}
+
+/*ロゴやSNSアイコンが入ったブロック*/
+footer div.footer1 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;	/*このブロック内のボックス同士の間に空ける余白。１文字分。*/
+}
+
+/*マップが入ったブロック*/
+footer div.footer2 {
+    flex: 1;
+}
+
+	/*画面700px以上の追加指定*/
+	@media screen and (min-width:700px) {
+
+	/*ブロック全体*/
+	footer {
+		display: flex;
+		gap: 2rem;		/*ロゴのブロックとメニューのブロックとの間の余白。2文字分。*/
+	}
+
+	/*ロゴやSNSアイコンが入ったブロック*/
+	footer div.footer1 {
+		text-align: left;
+		width: 40%;	/*幅。40%。*/
+	}
+
+	/*マップが入ったブロック*/
+	footer div.footer2 {
+		/*margin-bottom: 0;	下の余白をなくす*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*SNSアイコン
+---------------------------------------------------------------------------*/
+.sns1 {
+	list-style: none;
+	margin: 0;padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;		/*アイコン同士のマージン的な要素。１文字分。*/
+}
+
+.sns1 i {
+	font-size: 30px;	/*アイコンサイズ*/
+}
+
+
+/*Google Map用（※キッチン雑貨テーマにて使用）
+---------------------------------------------------------------------------*/
+.iframe-box1 {
+	width: 100%;
+	height: 0;
+	padding-top: 56.25% !important;	/*マップの高さを増やしたい場合は、ここの数値を上げてみて下さい。*/
+	position: relative;
+	overflow: hidden;
+}
+.iframe-box1 iframe {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+.pagetop-show {display: block;}
+
+/*ボタンの設定*/
+.pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;
+	animation: opa1 1s 0.4s both;
+	position: fixed;	/*スクロールに追従しない(固定で表示)為の設定*/
+	right: 20px;		/*右からの配置場所指定*/
+	bottom: 50px;		/*下からの配置場所指定*/
+	font-size: 1.5rem;	/*文字サイズ*/
+	background: var(--primary-color);	/*背景色。css冒頭のprimary-colorを読み込みます。*/
+	color: var(--primary-inverse-color);
+	width: 60px;		/*幅*/
+	line-height: 60px;	/*高さ*/
+	border-radius: 50%;	/*円形にする*/
 }
 
 /* ページ幅調整 */
