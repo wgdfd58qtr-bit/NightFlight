@@ -383,6 +383,147 @@ a.btn5:hover {
   padding-bottom: 2px;
 }
 
+/*「商品ラインナップ」ブロック
+---------------------------------------------------------------------------*/
+.list-grid .list * {margin: 0;padding: 0;}
+
+/*ブロック全体を囲むブロック*/
+.list-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);	/*2列にする指定。3列にしたければrepeat(3, 1fr)とする。*/
+	gap: 3rem;	/*ブロックの間に1文字分のスペースを空ける*/
+}
+
+	/*画面幅800px以上の追加指定*/
+	@media screen and (min-width:800px) {
+
+	/*ブロック全体を囲むブロック*/
+	.list-grid {
+		grid-template-columns: repeat(4, 1fr);	/*4列にする指定。2列にしたければrepeat(2, 1fr)とする。*/
+		gap: 2rem;	/*ブロックの間に2文字分のスペースを空ける*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*ボックス１個あたり*/
+.list-grid .list {
+    display: grid;
+	position: relative;
+    grid-template-rows: auto 1fr;	/*１つ目（この場合はfigure要素のサイズ）は自動に、２つ目（この場合はtextブロック））を残った幅で使う*/
+	overflow: hidden;
+}
+
+/*ボックス内のp要素*/
+.list-grid .list p {
+	font-size: 0.85rem;	/*文字サイズを85%に*/
+	line-height: 1.5;	/*行間を少し狭く*/
+}
+
+
+
+/*スライドアップの装飾画像
+---------------------------------------------------------------------------*/
+/*画像ボックス*/
+.bg-slideup {
+    background-image: url("../images/6.jpg");	/*背景画像の読み込み*/
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+	height: 50vh;	/*高さ。画面の高さの50%になる設定ですがお好みで。*/
+	border-radius: 0px 15vw 0px 15vw;	/*角を丸くする指定。左上、右上、右下、左下への順番。*/
+}
+
+
+
+/*横スクロールブロック全体*/
+.list-yoko-scroll {
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: none;	/* Firefox用 */
+	scroll-snap-type: x mandatory; /* スナップスクロールを有効にする */
+}
+.list-yoko-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge用 */
+}
+
+/*ブロック内の１個あたり*/
+.list-yoko-scroll .list {
+	width: 60%;		/*ブロック１個の幅。お好みで変更して下さい。*/
+	flex-shrink: 0;
+	scroll-snap-align: start;
+	padding: 0 2rem;		/*ブロック内の余白。上下は0（ゼロ）、左右に2文字分。*/
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+	/*画面幅600px以上の追加指定*/
+	@media screen and (min-width:600px) {
+
+	/*ブロック内の１個あたり*/
+	.list-yoko-scroll .list {
+		width: 28%;		/*ブロック１個の幅。お好みで変更して下さい。*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*画像*/
+.list-yoko-scroll figure {
+	width: 80px;		/*幅。お好みで。*/
+	border-radius: 50%;	/*円形にする*/
+	overflow: hidden;
+	margin: 0 auto 1rem;
+}
+
+/*h4見出し*/
+.list-yoko-scroll h4 {
+	text-align: center;	/*中央に配置*/
+}
+
+/*テキストブロック*/
+.list-yoko-scroll .text {
+	flex: 1;
+	font-size: 0.85rem;	/*文字サイズ85%*/
+	line-height: 1.5;	/*行間*/
+}
+
+
+/*２カラムレイアウト用（下のお知らせブロック用で使っています）
+---------------------------------------------------------------------------*/
+.news-c2 * {margin: 0;padding: 0;}
+
+/*左側のタイトルブロック*/
+.news-c2 .title {
+	margin-bottom: 2rem;	/*下に2文字分のスペースを空ける*/
+	text-align: center;		/*テキストをセンタリング*/
+}
+
+	/*画面幅600px以上の追加指定*/
+	@media screen and (min-width:600px) {
+
+	.news-c2 {
+		display: flex;
+		gap: 2rem;
+	}
+
+	/*左側のタイトルブロック*/
+	.news-c2 .title {
+		margin-bottom: 0;	/*マージンのリセット*/
+		text-align: left;	/*テキストを左寄せ*/
+		width: 30%;			/*ブロックの幅*/
+	}
+
+	/*右側のテキストブロック*/
+	.news-c2 .text {
+		flex: 1;
+	}
+
+	}/*追加指定ここまで*/
+
+
+
 /*list-c2（作品販売、アンケート）
 ---------------------------------------------------------------------------*/
 .list-c2 > a {
