@@ -28,6 +28,251 @@ img {
   display: block;
 }
 
+/*Google Fontsの読み込み
+---------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+
+/*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
+---------------------------------------------------------------------------*/
+:root {
+
+	--base-color: #000000;					/*テンプレートの土台となる色（主に背景カラー）*/
+	--base-inverse-color: #fff;		/*上のbase-colorの対となる色（主にテキストカラー）*/
+
+	--primary-color: #ffffff;			/*テンプレートのメインまたはアクセントカラー*/
+	--primary-inverse-color: #000000;		/*上のprimary-colorの対となる色*/
+
+	--content-space: 2rem;				/*余白の一括管理用。2rem＝2文字分。*/
+	
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	:root {
+
+		--content-space: 4rem;			/*余白の一括管理用。4rem＝4文字分。*/
+
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*animation11のキーフレーム設定
+---------------------------------------------------------------------------*/
+@keyframes animation1 {
+	0% {left: -200px;}
+	100% {left: 0px;}
+}
+
+
+/*opa1のキーフレーム設定
+---------------------------------------------------------------------------*/
+@keyframes opa1 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/*jump1のキーフレーム設定
+---------------------------------------------------------------------------*/
+@keyframes jump1 {
+  0%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+
+/*ヘッダー右側の「アンケート」のボックス
+---------------------------------------------------------------------------*/
+#header-box * {margin: 0;padding: 0;}
+
+/*ボックス全体*/
+#header-box {
+	list-style: none;
+	position: fixed;	/*スクロールしても常に同じ場所に配置*/
+	z-index: 101;
+	right: 25px;		/*右側からの配置場所。ハンバーガーアイコンの幅と合わせておくときれいに並びます。*/
+	top: 10px;			/*上からの配置場所。*/
+	height: 70px;		/*高さ。ハンバーガーアイコンの高さと合わせておくときれいに並びます。*/
+	display: flex;		/*メニューが増えた場合に横並びにする*/
+}
+
+/*メニュー１個あたり*/
+#header-box a {
+	display: flex;text-decoration: none;
+	height: 100%;
+	align-items: center;
+	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
+	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
+	padding: 0 2rem;	/*上下、左右へのボタン内の余白*/
+}
+
+
+/*mainimg（4枚構成の横スライドショー）
+---------------------------------------------------------------------------*/
+/*h2見出し*/
+#mainimg-box h2 {
+	font-size: 5vw;	/*文字サイズ*/
+	line-height: 1.6;	/*行間を少し狭く*/
+	font-weight: 200;	/*文字の太さ。細く。*/
+	position: relative;	/*カギカッコを絶対配置する為に必要な指定*/
+	display: inline-block;
+	padding: 1rem 3rem;	/*上下、左右への見出し内の余白。カギカッコとテキストの間のバランスを調整します。*/
+}
+
+/*h2内の色がついた部分（span）*/
+#mainimg-box h2 span {
+	color: var(--primary-color);	/*css冒頭のprimary-colorを読み込みます。*/
+}
+
+/*h2見出しのカギカッコ装飾（共通設定）*/
+#mainimg-box h2::before,
+#mainimg-box h2::after {
+	content: "";
+	position: absolute;
+	width: 20px;	/*カギカッコの幅。お好みで。*/
+	height: 50px;	/*カギカッコの高さ。お好みで。*/
+	border: 1px solid var(--base-inverse-color);	/*枠線の幅、線種、varは色の事でcss冒頭で指定しているvase-inverse-colorを読み込みます*/
+
+}
+/*h2見出しの最初（左上）のカギカッコの設定*/
+#mainimg-box h2::before {
+	top: 0px;
+	left: 0px;
+	border-right: none;		/*右の線は消す*/
+	border-bottom: none;	/*下の線は消す*/
+}
+
+/*h2見出しの最後（右下）のカギカッコの設定*/
+#mainimg-box h2::after {
+	bottom: 0px;
+	right: 0px;
+	border-left: none;	/*左の線は消す*/
+	border-top: none;	/*上の線は消す*/
+}
+
+/*スライドショー全体を囲むブロック*/
+#mainimg {
+	overflow-x: hidden;
+	position: relative;
+	background: linear-gradient(transparent 20%, var(--primary-color) 20%);/*背景グラデーション。上から20%までは透明で、それ以外はcss冒頭のprimary-colorを読み込みます。最後にも20%とする事で境界がくっきりします。これがないとなめらかグラデーションに。*/
+	color: var(--primary-inverse-color);	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
+}
+
+/*画像たちを囲むブロック*/
+#mainimg .img {
+	display: flex;
+}
+
+/*画像*/
+#mainimg .img img {
+	padding: 0 1vw;	/*上下の余白はなし、左右への余白は画面の1%*/
+}
+
+/*スライド下の英語表記のテキスト*/
+#mainimg .img + p.c {
+	padding: 2rem;		/*テキスト内の余白。2文字分。*/
+	font-size: 1.4rem;	/*文字サイズ140%*/
+}
+
+/*スライド下の英語テキストに使うフォント。css冒頭のGoogle Fonts（Caveat）用のスタイル*/
+.caveat {
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*右から左へ、左から右へ、のアニメーション*/
+#mainimg .rtl, #mainimg .ltr {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#mainimg .rtl {animation-name: slide-rtl;}
+#mainimg .ltr {animation-name: slide-ltr;}
+
+@keyframes slide-rtl {
+0% {transform: translateX(0);}
+100% {transform: translateX(-50%);}
+}
+
+@keyframes slide-ltr {
+0% {transform: translateX(-50%);}
+100% {transform: translateX(0);}
+}
+
+
+/*コンテンツ
+---------------------------------------------------------------------------*/
+/*コンテンツブロック*/
+#contents {
+	flex: 1;
+}
+
+/*コンテンツ内で使用するul,ol要素（リストタグ）*/
+#contents ul,#contents ol {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+
+/*main
+---------------------------------------------------------------------------*/
+/*h2見出し*/
+main h2 {
+	font-weight: 500;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
+	font-size: 1.8rem;	/*文字サイズ180%。*/
+}
+
+
+/*大ステメ
+---------------------------------------------------------------------------*/
+/*p要素に使っています*/
+.message {
+	line-height: 3;		/*行間を広くする*/
+}
+
+	/*画面幅700px以上の追加指定*/
+	@media screen and (min-width:700px) {
+
+	.message {
+		text-align: center;	/*中身をセンタリング*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*btn5（「アンケートはこちら」ボタン）
+---------------------------------------------------------------------------*/
+.btn5-container {
+	position: relative;
+	margin-top: 40px;	/*ふきだしを使う場合に上の要素に食い込んでしまうので、それを回避する*/
+}
+a.btn5 {
+	text-decoration: none;display: inline-block;
+	background:red;/*背景グラデーション。#f24137からcss冒頭のprimary-colorへかけて色が変化。*/
+	color: #fff;		/*文字色*/
+	padding: 1rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
+	font-size: 1.3rem;	/*文字サイズを130%*/
+	border-radius: 5px;	/*角を少しだけ丸くする*/
+}
+
+/*マウスオン時に少しだけ大きく*/
+a.btn5:hover {
+	transform: scale(1.02);
+}
+
 /* ヘッダー */
 .header {
   display: flex;
