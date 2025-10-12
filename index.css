@@ -177,7 +177,7 @@ a:hover {
 ---------------------------------------------------------------------------*/
 /*ヘッダーブロック*/
 header {
-	padding: var(--content-space) -25;	/*ヘッダー内の余白。上下にcss冒頭のcontent-spaceを読み込み、左右は0（ゼロ）*/
+	padding: var(--content-space) 0;	/*ヘッダー内の余白。上下にcss冒頭のcontent-spaceを読み込み、左右は0（ゼロ）*/
 }
 
 	/*画面幅400px以下の追加指定*/
@@ -185,7 +185,7 @@ header {
 
 	/*ヘッダーブロック*/
 	header {
-		padding-top: calc(var(--content-space);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
+		padding-top: calc(var(--content-space)+10);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
 	}
 	
 	}/*追加指定ここまで*/
@@ -419,108 +419,6 @@ a.btn5:hover {
 
 
 
-/*スライドアップの装飾画像
----------------------------------------------------------------------------*/
-/*画像ボックス*/
-.bg-slideup {
-    background-image: url("../images/6.jpg");	/*背景画像の読み込み*/
-    background-repeat: no-repeat;
-    background-size: cover;
-	width: 100%;
-	height: 50vh;	/*高さ。画面の高さの50%になる設定ですがお好みで。*/
-	border-radius: 0px 15vw 0px 15vw;	/*角を丸くする指定。左上、右上、右下、左下への順番。*/
-}
-
-
-
-/*横スクロールブロック全体*/
-.list-yoko-scroll {
-	display: flex;
-	overflow-x: auto;
-	scrollbar-width: none;	/* Firefox用 */
-	scroll-snap-type: x mandatory; /* スナップスクロールを有効にする */
-}
-.list-yoko-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge用 */
-}
-
-/*ブロック内の１個あたり*/
-.list-yoko-scroll .list {
-	width: 60%;		/*ブロック１個の幅。お好みで変更して下さい。*/
-	flex-shrink: 0;
-	scroll-snap-align: start;
-	padding: 0 2rem;		/*ブロック内の余白。上下は0（ゼロ）、左右に2文字分。*/
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
-
-	/*画面幅600px以上の追加指定*/
-	@media screen and (min-width:600px) {
-
-	/*ブロック内の１個あたり*/
-	.list-yoko-scroll .list {
-		width: 28%;		/*ブロック１個の幅。お好みで変更して下さい。*/
-	}
-
-	}/*追加指定ここまで*/
-
-
-/*画像*/
-.list-yoko-scroll figure {
-	width: 80px;		/*幅。お好みで。*/
-	border-radius: 50%;	/*円形にする*/
-	overflow: hidden;
-	margin: 0 auto 1rem;
-}
-
-/*h4見出し*/
-.list-yoko-scroll h4 {
-	text-align: center;	/*中央に配置*/
-}
-
-/*テキストブロック*/
-.list-yoko-scroll .text {
-	flex: 1;
-	font-size: 0.85rem;	/*文字サイズ85%*/
-	line-height: 1.5;	/*行間*/
-}
-
-
-/*２カラムレイアウト用（下のお知らせブロック用で使っています）
----------------------------------------------------------------------------*/
-.news-c2 * {margin: 0;padding: 0;}
-
-/*左側のタイトルブロック*/
-.news-c2 .title {
-	margin-bottom: 2rem;	/*下に2文字分のスペースを空ける*/
-	text-align: center;		/*テキストをセンタリング*/
-}
-
-	/*画面幅600px以上の追加指定*/
-	@media screen and (min-width:600px) {
-
-	.news-c2 {
-		display: flex;
-		gap: 2rem;
-	}
-
-	/*左側のタイトルブロック*/
-	.news-c2 .title {
-		margin-bottom: 0;	/*マージンのリセット*/
-		text-align: left;	/*テキストを左寄せ*/
-		width: 30%;			/*ブロックの幅*/
-	}
-
-	/*右側のテキストブロック*/
-	.news-c2 .text {
-		flex: 1;
-	}
-
-	}/*追加指定ここまで*/
-
-
-
 /*list-c2（作品販売、アンケート）
 ---------------------------------------------------------------------------*/
 .list-c2 > a {
@@ -738,53 +636,8 @@ footer div.footer2 {
 
 /* ページ幅調整 */
 #container, .list-grid, .intro, .works, .list, #mainimg-box {
-  max-width: 100%;
-  width: 100%;
+  max-width: auto;
+  width: auto;
   margin: 0 auto;
   box-sizing: border-box;
 }
-/*sectionの両サイドの余白を相殺するスタイル
----------------------------------------------------------------------------*/
-.margin-lr0 {
-	margin: 0 calc(-1 * var(--content-space));
-}
-
-
-/*マニュアルページ用
----------------------------------------------------------------------------*/
-#manual {background-image: none;}
-.manual {
-	padding: 5vw;
-}
-.manual h2,.manual h3 {
-	margin-top: 3rem;
-}
-pre {white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;}
-
-
-/*その他
----------------------------------------------------------------------------*/
-.clearfix::after {content: "";display: block;clear: both;}
-.color-check, .color-check a {color: #ff0000 !important;}
-.l {text-align: left !important;}
-.c {text-align: center !important;}
-.r {text-align: right !important;}
-.ws {width: 95%;display: block;}
-.wl {width: 95%;display: block;}
-.mb0 {margin-bottom: 0px !important;}
-.mb30 {margin-bottom: 30px !important;}
-.look {display: inline-block;padding: 0px 10px;background: #eee;border: 1px solid #ccc; color: #888; border-radius: 3px;margin: 5px 0; word-break: break-all;}
-.small {font-size: 0.75em;}
-.large {font-size: 2em; letter-spacing: 0.1em;}
-.pc {display: none;}
-.dn {display: none !important;}
-.block {display: block !important;}
-
-	/*画面幅900px以上の追加指定*/
-	@media screen and (min-width:900px) {
-
-	.ws {width: 48%;display: inline;}
-	.sh {display: none;}
-	.pc {display: block;}
-
-	}/*追加指定ここまで*/
