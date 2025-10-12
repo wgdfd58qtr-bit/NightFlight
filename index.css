@@ -91,6 +91,87 @@ img {
   }
 }
 
+/*全体の設定
+---------------------------------------------------------------------------*/
+body * {box-sizing: border-box;}
+html,body {
+	font-size: 13px;	/*基準となるフォントサイズ。*/
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	html, body {
+		font-size: 15px;	/*基準となるフォントサイズ。*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+body {
+	margin: 0;padding:0;
+	font-family: "Noto Serif JP", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;	/*フォント種類（ゴシック）*/
+	font-optical-sizing: auto;
+	font-style: normal;
+	-webkit-text-size-adjust: none;
+	background: var(--base-color);		/*背景色。css冒頭のbase-colorを読み込みます。*/
+	color: var(--base-inverse-color);	/*文字色。css冒頭のbase-inverse-colorを読み込みます。*/
+	line-height: 2;		/*行間*/
+	overflow-x: hidden;
+}
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav,ul,li,ol {margin: 0;padding: 0;}
+nav ul {list-style: none;}
+
+/*table全般の設定*/
+table {border-collapse:collapse;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*videoタグ*/
+video {max-width: 100%;}
+
+/*iframeタグ*/
+iframe {width: 100%;}
+
+/*他*/
+input {font-size: 1rem;}
+
+/*section*/
+section {
+	padding: var(--content-space) 0;	/*section内の余白。上下にcss冒頭のcontent-spaceを読み込み、左右は0（ゼロ）*/
+}
+
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	color: inherit;
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+/*マウスオン時*/
+a:hover {
+	filter: brightness(1.1);	/*少しだけ明るくする*/
+}
+
+
+/*コンテナー（サイト全体を囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	position: relative;
+	animation: opa1 1s 0.4s both;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 0 var(--content-space);	/*コンテナー内の余白。上下は0（ゼロ）、左右はcss冒頭のcontent-spaceを読み込む。*/
+}
+
+
 
 /*header（ロゴが入った最上段のブロック）
 ---------------------------------------------------------------------------*/
