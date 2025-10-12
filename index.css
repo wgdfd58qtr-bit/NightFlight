@@ -368,7 +368,7 @@ a.btn5:hover {
 }
 
 	/*画面幅800px以上の追加指定*/
-	@media screen and (min-width:800px) {
+	@media screen and (min-width:799px) {
 		.list-grid {
 		grid-template-columns: repeat(2, 1fr); /* スマホでは2列にする例 */
 		gap: 1rem;
@@ -616,9 +616,13 @@ footer div.footer2 {
 }
 
 /* ページ幅調整 */
-#container, .list-grid, .intro, .works, .list, #mainimg-box {
-  max-width: auto;
-  width: auto;
+#container,
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4列固定 */
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px; /* 任意で調整 */
   margin: 0 auto;
   box-sizing: border-box;
 }
