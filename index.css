@@ -218,32 +218,6 @@ header {
 	color: var(--primary-color);	/*css冒頭のprimary-colorを読み込みます。*/
 }
 
-/*h2見出しのカギカッコ装飾（共通設定）*/
-#mainimg-box h2::before,
-#mainimg-box h2::after {
-	content: "";
-	position: absolute;
-	width: 20px;	/*カギカッコの幅。お好みで。*/
-	height: 50px;	/*カギカッコの高さ。お好みで。*/
-	border: 1px solid var(--base-inverse-color);	/*枠線の幅、線種、varは色の事でcss冒頭で指定しているvase-inverse-colorを読み込みます*/
-
-}
-/*h2見出しの最初（左上）のカギカッコの設定*/
-#mainimg-box h2::before {
-	top: 0px;
-	left: 0px;
-	border-right: none;		/*右の線は消す*/
-	border-bottom: none;	/*下の線は消す*/
-}
-
-/*h2見出しの最後（右下）のカギカッコの設定*/
-#mainimg-box h2::after {
-	bottom: 0px;
-	right: 0px;
-	border-left: none;	/*左の線は消す*/
-	border-top: none;	/*上の線は消す*/
-}
-
 /*スライドショー全体を囲むブロック*/
 #mainimg {
 	overflow-x: hidden;
@@ -307,6 +281,7 @@ header {
 #contents ul,#contents ol {
 	margin-left: 2rem;
 	margin-right: 2rem;
+	text-align: center; 
 }
 
 /*main
@@ -315,6 +290,7 @@ header {
 main h2 {
 	font-weight: 500;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
 	font-size: 1.8rem;	/*文字サイズ180%。*/
+	text-align: center; 
 }
 
 /*大ステメ
@@ -322,6 +298,7 @@ main h2 {
 /*p要素に使っています*/
 .message {
 	line-height: 3;		/*行間を広くする*/
+	text-align: center; 
 }
 
 	/*画面幅700px以上の追加指定*/
