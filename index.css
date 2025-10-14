@@ -236,7 +236,7 @@ header {
 
 /*画像*/
 #mainimg .img img {
-	padding: 0 10vw;	/*上下の余白はなし、左右への余白は画面の1%*/
+	padding: 10 10vw;	/*上下の余白はなし、左右への余白は画面の1%*/
 }
 
 /*スライド下の英語表記のテキスト*/
@@ -327,7 +327,7 @@ a.btn5 {
 	text-align: center; 
 	background:red;/*背景グラデーション。#f24137からcss冒頭のprimary-colorへかけて色が変化。*/
 	color: #fff;		/*文字色*/
-	padding: 1rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
+	padding: 3rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
 	font-size: 1.3rem;	/*文字サイズを130%*/
 	border-radius: 5px;	/*角を少しだけ丸くする*/
 }
