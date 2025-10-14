@@ -294,6 +294,7 @@ header {
 main h2 {
 	font-weight:300;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
 	font-size: 1.0rem;	/*文字サイズ180%。*/
+	top: 50px;	
 	text-align: center; 
 }
 
