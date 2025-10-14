@@ -25,7 +25,6 @@
 	--primary-inverse-color: #000000;		/*上のprimary-colorの対となる色*/
 
 	--content-space: 2rem;				/*余白の一括管理用。2rem＝2文字分。*/
-	text-align: center; 
 	
 }
 
@@ -35,7 +34,6 @@
 	:root {
 
 		--content-space: 4rem;			/*余白の一括管理用。4rem＝4文字分。*/
-		text-align: center; 
 
 	}
 
