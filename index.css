@@ -341,6 +341,7 @@ main h2 {
 }
 a.btn5 {
 	text-decoration: none;display: inline-block;
+	text-align: center; 
 	background:red;/*背景グラデーション。#f24137からcss冒頭のprimary-colorへかけて色が変化。*/
 	color: #fff;		/*文字色*/
 	padding: 1rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
