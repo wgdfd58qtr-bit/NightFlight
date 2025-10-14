@@ -208,8 +208,8 @@ header {
 	font-size: 5vw;	/*文字サイズ*/
 	line-height: 1.6;	/*行間を少し狭く*/
 	font-weight: 200;	/*文字の太さ。細く。*/
-	position: relative;	/*カギカッコを絶対配置する為に必要な指定*/
 	display: inline-block;
+	text-align: center; 
 	padding: 1rem 3rem;	/*上下、左右への見出し内の余白。カギカッコとテキストの間のバランスを調整します。*/
 }
 
@@ -337,8 +337,10 @@ main h2 {
 ---------------------------------------------------------------------------*/
 .btn5-container {
 	position: relative;
+	text-align: center; 
 	margin-top: 40px;	/*ふきだしを使う場合に上の要素に食い込んでしまうので、それを回避する*/
 }
+
 a.btn5 {
 	text-decoration: none;display: inline-block;
 	text-align: center; 
@@ -397,7 +399,8 @@ a.btn5:hover {
 /*ボックス内のp要素*/
 .list-grid .list p {
 	font-size: 0.85rem;	/*文字サイズを85%に*/
-	line-height: 1.5;	/*行間を少し狭く*/
+	line-height: 1.5;/*行間を少し狭く*/
+	text-align: center; 
 }
 
 
