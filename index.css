@@ -80,7 +80,7 @@ html,body {
 	@media screen and (min-width:900px) {
 
 	html, body {
-		font-size: 15px;	/*基準となるフォントサイズ。*/
+		font-size: 13px;	/*基準となるフォントサイズ。*/
 		text-align: center; 
 	}
 
@@ -210,7 +210,7 @@ header {
 ---------------------------------------------------------------------------*/
 /*h2見出し*/
 #mainimg-box h2 {
-	font-size: 5vw;	/*文字サイズ*/
+	font-size: 3vw;	/*文字サイズ*/
 	line-height: 1.6;	/*行間を少し狭く*/
 	font-weight: 200;	/*文字の太さ。細く。*/
 	display: inline-block;
