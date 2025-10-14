@@ -25,6 +25,7 @@
 	--primary-inverse-color: #000000;		/*上のprimary-colorの対となる色*/
 
 	--content-space: 2rem;				/*余白の一括管理用。2rem＝2文字分。*/
+	text-align: center; 
 	
 }
 
@@ -34,6 +35,7 @@
 	:root {
 
 		--content-space: 4rem;			/*余白の一括管理用。4rem＝4文字分。*/
+		text-align: center; 
 
 	}
 
@@ -71,6 +73,7 @@
 body * {box-sizing: border-box;}
 html,body {
 	font-size: 13px;	/*基準となるフォントサイズ。*/
+	text-align: center; 
 }
 
 	/*画面幅900px以上の追加指定*/
@@ -78,6 +81,7 @@ html,body {
 
 	html, body {
 		font-size: 15px;	/*基準となるフォントサイズ。*/
+		text-align: center; 
 	}
 
 	}/*追加指定ここまで*/
@@ -88,6 +92,7 @@ body {
 	font-family: "Noto Serif JP", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;	/*フォント種類（ゴシック）*/
 	font-optical-sizing: auto;
 	font-style: normal;
+	text-align: center; 
 	-webkit-text-size-adjust: none;
 	background: var(--base-color);		/*背景色。css冒頭のbase-colorを読み込みます。*/
 	color: var(--base-inverse-color);	/*文字色。css冒頭のbase-inverse-colorを読み込みます。*/
@@ -240,6 +245,7 @@ header {
 #mainimg .img + p.c {
 	padding: 2rem;		/*テキスト内の余白。2文字分。*/
 	font-size: 1.4rem;	/*文字サイズ140%*/
+	text-align: center; 
 }
 
 /*スライド下の英語テキストに使うフォント。css冒頭のGoogle Fonts（Caveat）用のスタイル*/
@@ -421,6 +427,7 @@ a.btn5:hover {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center; 
 	}
 	.list-c2 > a .list {
 		height: 100%;
@@ -442,7 +449,8 @@ a.btn5:hover {
 /*h4見出し*/
 .list-c2 h4 {
 	font-weight: 200;	/*細字にする*/
-	line-height: 1.2;	/*行間を狭く*/
+	line-height: 1.2;/*行間を狭く*/
+	text-align: center; 
 }
 
 /*h4見出し内のメインテキスト（main-text）*/
@@ -451,6 +459,7 @@ a.btn5:hover {
 	font-size: 3rem;		/*文字サイズ。3倍。*/
 	padding-top: 1.5rem;	/*上に空ける余白*/
 	padding-bottom: 3rem;	/*下に空ける余白*/
+	text-align: center; 
 }
 
 	/*画面幅600px以上の追加指定*/
