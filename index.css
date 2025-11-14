@@ -85,17 +85,15 @@ html,body {
 
 
 body {
-	margin:auto;
-	padding:0;
+	margin: 0;padding:0;
 	font-family: "Noto Serif JP", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;	/*フォント種類（ゴシック）*/
-	font-optical-sizing:auto;
-	font-style:normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 	-webkit-text-size-adjust: none;
-	background:var(--base-color);		/*背景色。css冒頭のbase-colorを読み込みます。*/
-	color:var(--base-inverse-color);	/*文字色。css冒頭のbase-inverse-colorを読み込みます。*/
-	line-height:2;		/*行間*/
-	overflow-x:hidden;
-	
+	background: var(--base-color);		/*背景色。css冒頭のbase-colorを読み込みます。*/
+	color: var(--base-inverse-color);	/*文字色。css冒頭のbase-inverse-colorを読み込みます。*/
+	line-height: 2;		/*行間*/
+	overflow-x: hidden;
 }
 
 /*リセット*/
@@ -140,18 +138,14 @@ a:hover {
 
 /*コンテナー（サイト全体を囲むブロック）
 ---------------------------------------------------------------------------*/
-.container {
+#container {
 	position: relative;
 	animation: opa1 1s 0.4s both;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	min-height: 100vh;
 	padding: 0 var(--content-space);	/*コンテナー内の余白。上下は0（ゼロ）、左右はcss冒頭のcontent-spaceを読み込む。*/
 }
-.item{
-	flex:1;
-	min-width: 300px;
 
 
 /*header（ロゴが入った最上段のブロック）
@@ -163,11 +157,7 @@ header {
 
 	/*画面幅400px以下の追加指定*/
 	@media screen and (max-width:400px) {
-.wrap{
-	display: flex;
-	flex-wrap: wrap;
-}
-		
+
 	/*ヘッダーブロック*/
 	header {
 		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
@@ -177,7 +167,7 @@ header {
 
 
 /*ロゴ*/
-#logo {margin: 0 auto;padding: 0;}
+#logo {margin:0;padding: 0;}
 #logo img {
 	display: inline-block;
 	width: 200px;	/*ロゴの幅*/
@@ -186,7 +176,7 @@ header {
 
 /*ヘッダー右側の「アンケート」のボックス
 ---------------------------------------------------------------------------*/
-#header-box * {margin: 0 auto;padding: 0;}
+#header-box * {margin: 0;padding: 0;}
 
 /*ボックス全体*/
 #header-box {
@@ -197,7 +187,6 @@ header {
 	top: 10px;			/*上からの配置場所。*/
 	height: 70px;		/*高さ。ハンバーガーアイコンの高さと合わせておくときれいに並びます。*/
 	display: flex;		/*メニューが増えた場合に横並びにする*/
-	flex-wrap:wrap;
 }
 
 /*メニュー１個あたり*/
@@ -370,7 +359,7 @@ a.btn5:hover {
 
 /*「商品ラインナップ」ブロック
 ---------------------------------------------------------------------------*/
-.list-grid .list * {margin: auto;padding: 0;}
+.list-grid .list * {margin: 0;padding: 0;}
 
 /*ブロック全体を囲むブロック*/
 .list-grid {
@@ -792,7 +781,64 @@ footer div.footer2 {
 }
 
 
+/*３本バー（ハンバーガー）アイコン設定
+---------------------------------------------------------------------------*/
+#menubar_hdr {
+	display: none; /* デフォルトは非表示 */
+	position: fixed;
+	z-index: 101;
+	cursor: pointer;
+	right: 0px;		/*右からの配置場所*/
+	top: 0px;		/*上からの配置場所*/
+	width: 70px;	/*ボタンの幅*/
+	height: 70px;	/*ボタンの高さ*/
+	background: #f43900;	/*ボタン色*/
+	transform-origin: right top;
+	transform: scale(1);	/*アイコンのサイズ。100%。このテンプレの場合はOnline Shopボタンと揃えてるので、基本、変更しない方がいいです。*/
+}
 
+/*バツ印が出ている時のボタン色*/
+#menubar_hdr.ham {
+	background: #ff0000;
+}
+
+/*ハンバーガーアイコンの線*/
+#menubar_hdr span {
+	display: block;
+	position: absolute;
+	left: 18px;
+	width: 35px;
+	height: 2px;		/*線の高さ*/
+	background: #fff;	/*線の色*/
+	transition: 0.3s;	/*線が切り替わる場合にかける時間。0.3秒。*/
+}
+
+/*以下は基本的に変更しない*/
+#menubar_hdr span:nth-of-type(1) {
+	top: 24px;
+}
+#menubar_hdr span:nth-of-type(2) {
+	top: 34px;
+}
+#menubar_hdr span:nth-of-type(3) {
+	top: 44px;
+}
+
+/* ハンバーガーメニュー展開時 */
+#menubar_hdr.ham span:nth-of-type(1) {
+	transform: translateY(10px) rotate(-45deg);
+}
+#menubar_hdr.ham span:nth-of-type(2) {
+	opacity: 0;
+}
+#menubar_hdr.ham span:nth-of-type(3) {
+	transform: translateY(-10px) rotate(45deg);
+}
+
+/*小さな画面での設定*/
+.small-screen #menubar_hdr {
+	display: flex;
+}
 
 
 /*開閉メニュー
@@ -839,6 +885,24 @@ a.ddmenu::before {
 a.ddmenu {cursor: default;}
 
 
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+.pagetop-show {display: block;}
+
+/*ボタンの設定*/
+.pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;
+	animation: opa1 1s 0.4s both;
+	position: fixed;	/*スクロールに追従しない(固定で表示)為の設定*/
+	right: 20px;		/*右からの配置場所指定*/
+	bottom: 50px;		/*下からの配置場所指定*/
+	font-size: 1.5rem;	/*文字サイズ*/
+	background: var(--primary-color);	/*背景色。css冒頭のprimary-colorを読み込みます。*/
+	color: var(--primary-inverse-color);
+	width: 60px;		/*幅*/
+	line-height: 60px;	/*高さ*/
+	border-radius: 50%;	/*円形にする*/
+}
 
 
 
