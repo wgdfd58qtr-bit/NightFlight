@@ -292,6 +292,11 @@ main .container {
 	text-align:center;
 }
 
+.container .big {
+  font-size: 35px;
+  font-weight: bold;
+}
+
 .message {
 		text-align:center;	/*中身をセンタリング*/
 	}
@@ -303,11 +308,11 @@ main .container {
 	line-height: 3;		/*行間を広くする*/
 }
 
-.container .big{ 
+.container .big {
+  font-size: 28px;
+  font-weight: bold;
 	text-align:center;
-	font-size:30px
-	font-waight:650;
-  }
+}
 
 	/*画面幅700px以上の追加指定*/
 	@media screen and (min-width:700px) {
