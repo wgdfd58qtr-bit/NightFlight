@@ -302,7 +302,12 @@ main h2 {
 	line-height: 3;		/*行間を広くする*/
 }
 
-.container{ text-align:center;}
+.container{ 
+	text-align:center;
+	font-size:30px
+	font-waight:650;
+		  
+		  }
 
 	/*画面幅700px以上の追加指定*/
 	@media screen and (min-width:700px) {
