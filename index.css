@@ -172,8 +172,8 @@ header {
 	display: inline-block;
 	width: 180px;	/*ロゴの幅*/
 	z-index: 101;
-	right: 15px;
-	top: 630px;
+	left: 15px;
+	top: 30px;
 	height: 70px;
 	display: flex;
 	position: absolute;
