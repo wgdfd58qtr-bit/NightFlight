@@ -290,7 +290,6 @@ main .container {
 	font-weight: 650;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
 	font-size: 1.8rem;	/*文字サイズ180%。*/
 	text-align:center;
-	font-size:30px
 }
 
 .message {
@@ -304,7 +303,7 @@ main .container {
 	line-height: 3;		/*行間を広くする*/
 }
 
-.container{ 
+.container p { 
 	text-align:center;
 	font-size:30px
 	font-waight:650;
