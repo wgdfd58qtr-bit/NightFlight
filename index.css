@@ -171,11 +171,14 @@ header {
 #logo img {
 	display: inline-block;
 	width: 180px;	/*ロゴの幅*/
+	z-index: 101;
 	right: 15px;
-	top: 30px;
+	top: 630px;
+	height: 70px;
 	display: flex;
 	position: absolute;
 }
+
 
 
 /*ヘッダー右側の「アンケート」のボックス
