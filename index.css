@@ -190,6 +190,7 @@ header {
 
 /*メニュー１個あたり*/
 #header-box a {
+		display: flex;text-decoration: none;
 	height: 100%;
 	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
 	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
