@@ -162,19 +162,19 @@ header {
 	position:relative;
 	width: 180px;	/*ロゴの幅*/
 	left: 15px;
-	top: 40px;
+	top: 8px;
 }
 
 
 /*ヘッダー右側の「アンケート」のボックス
 ---------------------------------------------------------------------------*/
-#header-box * {margin: auto;padding: 0;}
+#header-box * {margin: 0;padding: 0;}
 
 /*ボックス全体*/
 #header-box {
 	list-style: none;
 	z-index: 101;
-	right: 15px;
+	right: 10px;
 	top: 15px;
 	height: 70px;
 	display: flex;
