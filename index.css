@@ -135,9 +135,7 @@ header {
 
 
 @media screen and (max-width:400px) {
-	header {
-		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
-	}
+	
 	  /* ロゴを中央寄せ＆ズレ防止 */
   #logo img {
     left: 15;
