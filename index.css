@@ -72,7 +72,6 @@
 body * {box-sizing: border-box;}
 html,body {
 	font-size: 13px;	/*基準となるフォントサイズ。*/
-	  text-align: center; 
 }
 
 	/*画面幅900px以上の追加指定*/
@@ -407,6 +406,7 @@ a.btn5:hover {
 .list-grid .list p {
 	font-size: 0.85rem;	/*文字サイズを85%に*/
 	line-height: 1.5;	/*行間を少し狭く*/
+	  text-align: center; 
 }
 
 
