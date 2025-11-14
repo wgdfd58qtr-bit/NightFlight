@@ -286,9 +286,12 @@ header {
 /*main
 ---------------------------------------------------------------------------*/
 /*h2見出し*/
-main h2 {
+main .container {
 	font-weight: 650;	/*太さ。200〜900まで指定可能。大きいほど太くなります。*/
 	font-size: 1.8rem;	/*文字サイズ180%。*/
+	text-align:center;
+	font-size:30px
+	font-waight:650;
 }
 
 .message {
@@ -306,8 +309,7 @@ main h2 {
 	text-align:center;
 	font-size:30px
 	font-waight:650;
-		  
-		  }
+  }
 
 	/*画面幅700px以上の追加指定*/
 	@media screen and (min-width:700px) {
