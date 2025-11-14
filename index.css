@@ -303,7 +303,7 @@ main .container {
 	line-height: 3;		/*行間を広くする*/
 }
 
-.container p { 
+.container .big{ 
 	text-align:center;
 	font-size:30px
 	font-waight:650;
