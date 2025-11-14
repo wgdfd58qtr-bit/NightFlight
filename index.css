@@ -175,7 +175,7 @@ header {
 	position:relative;
 	width: 180px;	/*ロゴの幅*/
 	left: 15px;
-	top: 30px;
+	top: 15px;
 }
 
 
@@ -198,7 +198,7 @@ header {
 /*メニュー１個あたり*/
 #header-box a {
 	display: flex;text-decoration: none;
-	height: 100%;
+	height: 75%;
 	align-items: center;
 	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
 	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
