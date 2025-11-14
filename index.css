@@ -142,8 +142,8 @@ header {
 	display: inline-block;
 	position:relative;
 	width: 180px;	/*ロゴの幅*/
-	left: 15px;
-	top: 8px;
+	left: 10px;
+	top: 10px;
 }
 
 
@@ -157,7 +157,7 @@ header {
 	z-index: 101;
 	right: 10px;
 	top: 15px;
-	height: 70px;
+	height: 60px;
 	display: flex;
 	position: absolute;
 }
