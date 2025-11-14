@@ -156,7 +156,7 @@ header {
 
 
 /*ロゴ*/
-#logo {margin: 0; padding: 0;}
+#logo {margin: auto; padding: 0;}
 #logo img {
 	display: inline-block;
 	position:relative;
@@ -168,7 +168,7 @@ header {
 
 /*ヘッダー右側の「アンケート」のボックス
 ---------------------------------------------------------------------------*/
-#header-box * {margin: 0;padding: 0;}
+#header-box * {margin: auto;padding: 0;}
 
 /*ボックス全体*/
 #header-box {
