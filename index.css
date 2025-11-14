@@ -167,7 +167,7 @@ header {
 
 
 /*ロゴ*/
-#logo {margin:auto;padding: 0;}
+#logo {margin: auto; padding: 0;}
 #logo img {
 	display: inline-block;
 	width: 180px;	/*ロゴの幅*/
