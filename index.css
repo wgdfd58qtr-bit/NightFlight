@@ -367,9 +367,23 @@ a.btn5:hover {
 /*ブロック全体を囲むブロック*/
 .list-grid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);	/*2列にする指定。3列にしたければrepeat(3, 1fr)とする。*/
-	gap: 3rem;	/*ブロックの間に1文字分のスペースを空ける*/
 }
+
+.photo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* 横幅を中央揃えにしたいなら */
+  gap: 20px;                 /* 写真間の余白：お好みで調整 */
+}
+
+.photo-list img {
+  width: 100%;               /* 横いっぱいにしたければ */
+  max-width: 600px;          /* 最大幅を指定したければ */
+  height: auto;              /* アスペクト比を保つ */
+}
+
+
+
 
 	/*画面幅800px以上の追加指定*/
 	@media screen and (min-width:800px) {
