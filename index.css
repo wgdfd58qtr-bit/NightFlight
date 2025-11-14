@@ -181,6 +181,7 @@ header {
 /*ボックス全体*/
 #header-box {
 	list-style: none;
+	position: absolute;
 	z-index: 101;
 	right: 15px;		/*右側からの配置場所。ハンバーガーアイコンの幅と合わせておくときれいに並びます。*/
 	top: 150px;			/*上からの配置場所。*/
