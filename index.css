@@ -134,23 +134,6 @@ header {
 }
 
 
-@media screen and (max-width:400px) {
-	
-	  /* ロゴを中央寄せ＆ズレ防止 */
-  #logo img {
-    left: 15;
-    top: 8;
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* アンケートボタンの位置も調整（必要なら） */
-  #header-box {
-    top: 10px;  /* ロゴの下に来るように調整 */
-    right: 10px;
-  }
-
-}/*追加指定ここまで*/
 
 
 /*ロゴ*/
