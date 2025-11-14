@@ -359,7 +359,7 @@ a.btn5:hover {
 
 /*「商品ラインナップ」ブロック
 ---------------------------------------------------------------------------*/
-.list-grid .list * {margin: auto;padding: 0;}
+.list-grid .list * {margin: 0;padding: 0;}
 
 /*ブロック全体を囲むブロック*/
 .list-grid {
