@@ -181,7 +181,6 @@ header {
 /*ボックス全体*/
 #header-box {
 	list-style: none;
-	z-index: 101;
 	right: 15px;		/*右側からの配置場所。ハンバーガーアイコンの幅と合わせておくときれいに並びます。*/
 	top: 150px;			/*上からの配置場所。*/
 	height: 60px;		/*高さ。ハンバーガーアイコンの高さと合わせておくときれいに並びます。*/
@@ -190,9 +189,7 @@ header {
 
 /*メニュー１個あたり*/
 #header-box a {
-	display: flex;text-decoration: none;
 	height: 100%;
-	align-items: center;
 	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
 	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
 	padding: 0 2rem;	/*上下、左右へのボタン内の余白*/
