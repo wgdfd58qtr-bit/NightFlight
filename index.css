@@ -359,7 +359,7 @@ a.btn5:hover {
   display: flex;
   flex-direction: column;
   align-items: center;       /* 横幅を中央揃えにしたいなら */
-  gap: 20px;                 /* 写真間の余白：お好みで調整 */
+  gap: 40px;                 /* 写真間の余白：お好みで調整 */
 }
 
 .photo-list img {
