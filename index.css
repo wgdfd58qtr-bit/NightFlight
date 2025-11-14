@@ -165,7 +165,27 @@ header {
 		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
 	}
 	
-	}/*追加指定ここまで*/
+	}
+
+@media screen and (max-width:400px) {
+
+  /* ロゴを中央寄せ＆ズレ防止 */
+  #logo img {
+    left: 15;
+    top: 15;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* アンケートボタンの位置も調整（必要なら） */
+  #header-box {
+    top: 100px;  /* ロゴの下に来るように調整 */
+    right: 10px;
+  }
+}
+
+
+/*追加指定ここまで*/
 
 
 /*ロゴ*/
