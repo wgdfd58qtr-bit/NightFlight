@@ -179,7 +179,6 @@ header {
 }
 
 
-
 /*ヘッダー右側の「アンケート」のボックス
 ---------------------------------------------------------------------------*/
 #header-box * {margin: 0;padding: 0;}
@@ -198,65 +197,7 @@ header {
 /*メニュー１個あたり*/
 #header-box a {
 	display: flex;text-decoration: none;
-	height: 75%;
-	align-items: center;
-	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
-	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
-	padding: 0 2rem;	/*上下、左右へのボタン内の余白*/
-}
-
-
-/*ヘッダー右側の「アンケート」のボックス
----------------------------------------------------------------------------*/
-#header-box * {margin: 0;padding: 0;}
-
-/*ボックス全体*/
-#header-box {
-	list-style: none;
-	z-index: 101;
-	right: 15px;
-	top: 60px;
-	height: 70px;
-	display: flex;
-	position: absolute;
-}
-
-/*メニュー１個あたり*/
-#header-box a {
-	display: flex;text-decoration: none;
-	height: 100%;
-	align-items: center;
-	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
-	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
-	padding: 0 2rem;	/*上下、左右へのボタン内の余白*/
-}
-
-	width: 180px;	/*ロゴの幅*/
-	left: 15px;
-	top: 15px;
-}
-
-
-
-/*ヘッダー右側の「アンケート」のボックス
----------------------------------------------------------------------------*/
-#header-box * {margin: 0;padding: 0;}
-
-/*ボックス全体*/
-#header-box {
-	list-style: none;
-	z-index: 101;
-	right: 15px;
-	top: 60px;
-	height: 70px;
-	display: flex;
-	position: absolute;
-}
-
-/*メニュー１個あたり*/
-#header-box a {
-	display: flex;text-decoration: none;
-	height: 100%;
+	height: 80%;
 	align-items: center;
 	background:red;		/*背景色。css冒頭のprimary-colorを読み込みます。*/
 	color:white;	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
