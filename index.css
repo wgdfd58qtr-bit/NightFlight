@@ -139,14 +139,18 @@ a:hover {
 
 /*コンテナー（サイト全体を囲むブロック）
 ---------------------------------------------------------------------------*/
-#container {
+.container {
 	position: relative;
 	animation: opa1 1s 0.4s both;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	min-height: 100vh;
 	padding: 0 var(--content-space);	/*コンテナー内の余白。上下は0（ゼロ）、左右はcss冒頭のcontent-spaceを読み込む。*/
 }
+.item{
+	flex:1;
+	min-width: 300px;
 
 
 /*header（ロゴが入った最上段のブロック）
@@ -158,7 +162,11 @@ header {
 
 	/*画面幅400px以下の追加指定*/
 	@media screen and (max-width:400px) {
-
+.wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+		
 	/*ヘッダーブロック*/
 	header {
 		padding-top: calc(var(--content-space) + 30px);	/*右上ボタンとロゴが重ならないようヘッダー上部の余白に70px上乗せ*/
@@ -168,7 +176,7 @@ header {
 
 
 /*ロゴ*/
-#logo {margin:0;padding: 0;}
+#logo {margin: 0 auto;padding: 0;}
 #logo img {
 	display: inline-block;
 	width: 200px;	/*ロゴの幅*/
@@ -177,7 +185,7 @@ header {
 
 /*ヘッダー右側の「アンケート」のボックス
 ---------------------------------------------------------------------------*/
-#header-box * {margin: 0;padding: 0;}
+#header-box * {margin: 0 auto;padding: 0;}
 
 /*ボックス全体*/
 #header-box {
@@ -188,6 +196,7 @@ header {
 	top: 10px;			/*上からの配置場所。*/
 	height: 70px;		/*高さ。ハンバーガーアイコンの高さと合わせておくときれいに並びます。*/
 	display: flex;		/*メニューが増えた場合に横並びにする*/
+	flex-wrap:wrap;
 }
 
 /*メニュー１個あたり*/
