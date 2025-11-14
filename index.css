@@ -171,6 +171,10 @@ header {
 #logo img {
 	display: inline-block;
 	width: 180px;	/*ロゴの幅*/
+	right: 15px;
+	top: 30px;
+	display: flex;
+	position: absolute;
 }
 
 
