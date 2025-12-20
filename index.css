@@ -513,6 +513,7 @@ footer .logo {
 	text-decoration: none;
 	color: inherit;
 	opacity: 0.6;	/*透明度。色を60%出す。*/
+	text-align: center;
 }
 
 /*マウスオン時*/
@@ -525,6 +526,7 @@ footer .logo {
 	margin: 0;list-style: none;
 	padding: 0 2px;
 	flex: 1;
+	text-align: center;
 }
 
 /*著作部分（※意図的に見えなくしたりしないで下さい。規約違反になります。）
@@ -537,12 +539,14 @@ footer .logo {
 	text-align: right;
 	padding: 0.5rem 1rem;
 	font-size: 0.8rem;
+	text-align: center;
 }
 .pr a::before {
 	font-family: "Font Awesome 6 Free";
 	content: "\e2ca";
 	font-weight: bold;
 	margin-right: 0.5em;
+	text-align: center;
 }
 
 
