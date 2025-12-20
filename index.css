@@ -174,13 +174,13 @@ h2{
   text-align: center;
 }
 
-.container .big {
+h2{
   font-size: 40px;
   font-weight: bold;
 	  text-align: center;
 }
 
-.message {
+.message{
 		text-align:center;	/*中身をセンタリング*/
 	  text-align: center;
 	}
