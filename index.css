@@ -147,39 +147,6 @@ header {
 }
 
 
-/*ヘッダー右側の「アンケート」のボックス
----------------------------------------------------------------------------*/
-#header-box * {margin: auto;padding: 0;}
-
-/*ボックス全体*/
-#header-box {
-	list-style: none;
-	position:fixed;
-	z-index: 101;
-	right: 30px;
-	top:50px;
-	height: 70px;
-	display: flex;
-}
-
-/*メニュー１個あたり*/
-#header-box{
-	text-decoration: none;display: inline-block;
-	align-items: center;
-	background:red;
-	color:white;
-	padding: 1rem 3rem;
-	font-size: 1.3rem;
-	border-radius: 5px;
-}
-
-
-	@media screen and (min-width:700px) {
-	.message {
-		text-align: center;
-	}
-	}
-
 
 
 /*コンテンツ
