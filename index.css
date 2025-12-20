@@ -176,10 +176,12 @@ main .container {
 .container .big {
   font-size: 40px;
   font-weight: bold;
+	  text-align: center;
 }
 
 .message {
 		text-align:center;	/*中身をセンタリング*/
+	  text-align: center;
 	}
 
 	h4 {
