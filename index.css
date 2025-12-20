@@ -173,6 +173,74 @@ header {
 }
 
 
+/*mainimg（4枚構成の横スライドショー）
+---------------------------------------------------------------------------*/
+/*h2見出し*/
+#mainimg-box h2 {
+	font-size: 5vw;	/*文字サイズ*/
+	line-height: 1.6;	/*行間を少し狭く*/
+	font-weight: 200;	/*文字の太さ。細く。*/
+	position: relative;	/*カギカッコを絶対配置する為に必要な指定*/
+	display: inline-block;
+	padding: 1rem 3rem;	/*上下、左右への見出し内の余白。カギカッコとテキストの間のバランスを調整します。*/
+}
+
+/*h2内の色がついた部分（span）*/
+#mainimg-box h2 span {
+	color: var(--primary-color);	/*css冒頭のprimary-colorを読み込みます。*/
+}
+
+/*スライドショー全体を囲むブロック*/
+#mainimg {
+	overflow-x: hidden;
+	position: relative;
+	background: linear-gradient(transparent 20%, var(--primary-color) 20%);/*背景グラデーション。上から20%までは透明で、それ以外はcss冒頭のprimary-colorを読み込みます。最後にも20%とする事で境界がくっきりします。これがないとなめらかグラデーションに。*/
+	color: var(--primary-inverse-color);	/*文字色。css冒頭のprimary-inverse-colorを読み込みます。*/
+}
+
+/*画像たちを囲むブロック*/
+#mainimg .img {
+	display: flex;
+}
+
+/*画像*/
+#mainimg .img img {
+	padding: 0 1vw;	/*上下の余白はなし、左右への余白は画面の1%*/
+}
+
+/*スライド下の英語表記のテキスト*/
+#mainimg .img + p.c {
+	padding: 2rem;		/*テキスト内の余白。2文字分。*/
+	font-size: 1.4rem;	/*文字サイズ140%*/
+}
+
+/*スライド下の英語テキストに使うフォント。css冒頭のGoogle Fonts（Caveat）用のスタイル*/
+.caveat {
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*右から左へ、左から右へ、のアニメーション*/
+#mainimg .rtl, #mainimg .ltr {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#mainimg .rtl {animation-name: slide-rtl;}
+#mainimg .ltr {animation-name: slide-ltr;}
+
+@keyframes slide-rtl {
+0% {transform: translateX(0);}
+100% {transform: translateX(-50%);}
+}
+
+@keyframes slide-ltr {
+0% {transform: translateX(-50%);}
+100% {transform: translateX(0);}
+}
+
 
 /*コンテンツ
 ---------------------------------------------------------------------------*/
