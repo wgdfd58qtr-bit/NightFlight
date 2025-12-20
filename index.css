@@ -175,7 +175,7 @@ h2{
 }
 
 h2{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 	  text-align: center;
 }
@@ -505,6 +505,7 @@ footer .logo {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	text-align: center;
 }
 
 /*ボックス内のリンクテキスト設定*/
