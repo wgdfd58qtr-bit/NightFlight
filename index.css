@@ -166,7 +166,7 @@ header {
 /*main
 ---------------------------------------------------------------------------*/
 /*h2見出し*/
-main .container {
+h2 {
 	margin-top: 100px;
   font-weight: 200;
   font-size: 1.8rem;
