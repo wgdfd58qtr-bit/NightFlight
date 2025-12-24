@@ -142,7 +142,7 @@ header {
 #logo img {
 	display: inline-block;
 	position:relative;
-	width: 180px;	/*ロゴの幅*/
+	width: 100px;	/*ロゴの幅*/
 	left: 10px;
 	top: 10px;
 }
