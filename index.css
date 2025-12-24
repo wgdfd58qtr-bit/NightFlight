@@ -216,7 +216,7 @@ h2{
 ---------------------------------------------------------------------------*/
 .btn5-container {
 	position: relative;
-	margin-top: 20px;	/*ふきだしを使う場合に上の要素に食い込んでしまうので、それを回避する*/
+	margin-top: 40px;	/*ふきだしを使う場合に上の要素に食い込んでしまうので、それを回避する*/
 }
 a.btn5 {
 	text-decoration: none;display: inline-block;
