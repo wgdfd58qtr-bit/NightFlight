@@ -157,16 +157,11 @@ header {
 }
 a.btn5 {
 	text-decoration: none;display: inline-block;
-	background:red;/*背景グラデーション。#f24137からcss冒頭のprimary-colorへかけて色が変化。*/
+	background:red;/*背景*/
 	color: #fff;		/*文字色*/
 	padding: 1rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
 	font-size: 1.3rem;	/*文字サイズを130%*/
 	border-radius: 5px;	/*角を少しだけ丸くする*/
-}
-
-/*マウスオン時に少しだけ大きく*/
-a.btn5:hover {
-	transform: scale(1.02);
 }
 
 
@@ -220,18 +215,12 @@ h2{
 }
 a.btn5 {
 	text-decoration: none;display: inline-block;
-	background:red;/*背景グラデーション。#f24137からcss冒頭のprimary-colorへかけて色が変化。*/
+	background:red;/*背景*/
 	color: #fff;		/*文字色*/
 	padding: 1rem 3rem;	/*ボタン内の余白。上下、左右へ。*/
 	font-size: 1.3rem;	/*文字サイズを130%*/
 	border-radius: 5px;	/*角を少しだけ丸くする*/
 }
-
-/*マウスオン時に少しだけ大きく*/
-a.btn5:hover {
-	transform: scale(1.02);
-}
-
 
 
 /*各写真ブロック
