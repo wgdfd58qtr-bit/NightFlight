@@ -149,7 +149,7 @@ header {
 
 
 
-/*btn5（「今だけ10%OFF　オンラインショップはこちら」ボタン）
+/*btn5（アンケートはこちらボタン）
 ---------------------------------------------------------------------------*/
 .btn5-container {
 	position: relative;
@@ -184,7 +184,7 @@ a.btn5:hover {
 }
 
 
-/*main
+/*mainコメント
 ---------------------------------------------------------------------------*/
 /*h2見出し*/
 h2{
@@ -212,7 +212,7 @@ h2{
 
 
 
-/*btn5（「今だけ10%OFF　オンラインショップはこちら」ボタン）
+/*btn5（アンケートはこちらボタン）
 ---------------------------------------------------------------------------*/
 .btn5-container {
 	position: relative;
@@ -234,7 +234,7 @@ a.btn5:hover {
 
 
 
-/*「商品ラインナップ」ブロック
+/*各写真ブロック
 ---------------------------------------------------------------------------*/
 .list-grid .list * {margin: 0;padding: 0;}
 
@@ -296,74 +296,6 @@ a.btn5:hover {
 	line-height: 1.5;	/*行間を少し狭く*/
 }
 
-
-
-/*スライドアップの装飾画像
----------------------------------------------------------------------------*/
-/*画像ボックス*/
-.bg-slideup {
-    background-image: url("../images/6.jpg");	/*背景画像の読み込み*/
-    background-repeat: no-repeat;
-    background-size: cover;
-	width: 100%;
-	height: 50vh;	/*高さ。画面の高さの50%になる設定ですがお好みで。*/
-	border-radius: 0px 15vw 0px 15vw;	/*角を丸くする指定。左上、右上、右下、左下への順番。*/
-}
-
-
-
-/*横スクロールブロック全体*/
-.list-yoko-scroll {
-	display: flex;
-	overflow-x: auto;
-	scrollbar-width: none;	/* Firefox用 */
-	scroll-snap-type: x mandatory; /* スナップスクロールを有効にする */
-}
-.list-yoko-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge用 */
-}
-
-/*ブロック内の１個あたり*/
-.list-yoko-scroll .list {
-	width: 60%;		/*ブロック１個の幅。お好みで変更して下さい。*/
-	flex-shrink: 0;
-	scroll-snap-align: start;
-	padding: 0 2rem;		/*ブロック内の余白。上下は0（ゼロ）、左右に2文字分。*/
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
-
-	/*画面幅600px以上の追加指定*/
-	@media screen and (min-width:600px) {
-
-	/*ブロック内の１個あたり*/
-	.list-yoko-scroll .list {
-		width: 28%;		/*ブロック１個の幅。お好みで変更して下さい。*/
-	}
-
-	}/*追加指定ここまで*/
-
-
-/*画像*/
-.list-yoko-scroll figure {
-	width: 80px;		/*幅。お好みで。*/
-	border-radius: 50%;	/*円形にする*/
-	overflow: hidden;
-	margin: 0 auto 1rem;
-}
-
-/*h4見出し*/
-.list-yoko-scroll h4 {
-	text-align: center;	/*中央に配置*/
-}
-
-/*テキストブロック*/
-.list-yoko-scroll .text {
-	flex: 1;
-	font-size: 0.85rem;	/*文字サイズ85%*/
-	line-height: 1.5;	/*行間*/
-}
 
 
 
