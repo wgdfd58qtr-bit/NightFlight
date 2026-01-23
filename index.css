@@ -431,9 +431,7 @@ footer .logo {
 		display: flex;
   justify-content: center; /* 横方向 */
   text-align: center;
-}
-
-		gap: 2rem;		/*ロゴのブロックとメニューのブロックとの間の余白。2文字分。*/
+gap: 2rem;		/*ロゴのブロックとメニューのブロックとの間の余白。2文字分。*/
 	}
 
 	}/*追加指定ここまで*/
