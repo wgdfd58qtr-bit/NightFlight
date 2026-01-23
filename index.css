@@ -408,6 +408,7 @@ a.btn5 {
 ---------------------------------------------------------------------------*/
 footer * {margin: 0;padding: 0;}
 footer ul {list-style: none;}
+font-margin:center;
 
 /*ブロック全体*/
 footer {
