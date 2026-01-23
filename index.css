@@ -411,12 +411,14 @@ footer ul {list-style: none;}
 
 /*ブロック全体*/
 footer {
-	background: #000;	/*背景色*/
-	color: #ccc;		/*文字色*/
-	padding: var(--content-space);	/*フッター内の余白。css冒頭のcontent-spaceを読み込みます。*/
+  background: #000;
+  color: #ccc;
+  padding: var(--content-space);
   display: flex;
-  justify-content: center; /* 横方向 */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 1rem;
 }
 
 /*フッター内のロゴ画像*/
