@@ -414,6 +414,9 @@ footer {
 	background: #000;	/*背景色*/
 	color: #ccc;		/*文字色*/
 	padding: var(--content-space);	/*フッター内の余白。css冒頭のcontent-spaceを読み込みます。*/
+  display: flex;
+  justify-content: center; /* 横方向 */
+  text-align: center;
 }
 
 /*フッター内のロゴ画像*/
